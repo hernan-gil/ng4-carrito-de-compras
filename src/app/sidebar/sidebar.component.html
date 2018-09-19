@@ -1,0 +1,19 @@
+<div>
+  <span class="title margin-botton-10">
+    Novedades
+  </span>
+</div>
+
+<article class="message" *ngFor="let producto of productos">
+  <div class="message-header">
+    <p class="subtitle white">{{producto.titulo}}</p>
+  </div>
+  <div class="message-body">
+	<img src="{{producto.img}}" class="img-thumbnail" style="height:100px;" />
+    {{producto.descripcion}}
+    <br> Precio: {{producto.precio}} $
+    <div class="message-footer">
+      <button (click)="addProducto(producto)" class="button is-info">Añadir al carrito</button>
+    </div>
+  </div>
+</article>
